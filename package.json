@@ -1,0 +1,9 @@
+{
+  "name": "deploylocal-website",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Public website for DeployLocal, a local-site builder and operator lead engine.",
+  "scripts": {
+    "build": "node -e \"console.log('static site')\""
+  }
+}

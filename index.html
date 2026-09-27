@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DeployLocal — a site for the shop, a lead book for the operator</title>
+    <meta
+      name="description"
+      content="DeployLocal is a dual product: a fast website builder for local businesses, and a private lead engine for operators who find shops that still have no site. This page describes the product. It does not claim live customer counts."
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="mast">
+      <a class="brand" href="/">DeployLocal</a>
+      <nav>
+        <a href="#preview">Preview</a>
+        <a href="#engine">Lead engine</a>
+        <a href="#request">Request</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Local websites · operator lead book</p>
+          <h1>Websites built for the shop. Leads found for the person who will call them.</h1>
+          <p class="lede">
+            DeployLocal has two doors. A business can generate a simple public
+            site from a few facts. An operator can use the private lead engine
+            to find local businesses that still have a weak or missing site,
+            then generate a draft before outreach. This page is the public
+            explanation of both doors.
+          </p>
+          <div class="actions">
+            <a class="btn primary" id="primary-cta" href="#preview">Preview a local site</a>
+            <a class="btn" href="#engine">See the lead engine</a>
+          </div>
+        </div>
+        <aside class="storefront" aria-label="Storefront sketch">
+          <div class="awning">MAIN STREET DRAFT</div>
+          <div class="window">
+            <p class="shop-name" id="shop-name">Harbor Bakehouse</p>
+            <p>Hours · menu · how to find us</p>
+          </div>
+        </aside>
+      </section>
+
+      <section id="preview">
+        <h2>Preview a local site</h2>
+        <p>
+          Pick a shop type. The card updates on this page. It is a sketch of
+          the builder, not a generated production site and not a live customer.
+        </p>
+        <form id="preview-form">
+          <label>
+            Shop type
+            <select name="shop">
+              <option value="bakery">Bakery</option>
+              <option value="garage">Auto garage</option>
+              <option value="clinic">Neighborhood clinic</option>
+            </select>
+          </label>
+          <button type="submit">Build the sketch</button>
+        </form>
+        <article id="sketch" class="sketch" hidden></article>
+      </section>
+
+      <section id="engine">
+        <h2>The private lead engine</h2>
+        <ul>
+          <li>Find local businesses whose public site is missing or thin.</li>
+          <li>Score which ones are worth a call.</li>
+          <li>Generate a draft site before outreach.</li>
+        </ul>
+        <p>
+          The engine is an operator tool. This public page does not expose
+          scraped leads or claim a book of closed deals.
+        </p>
+      </section>
+
+      <section id="request">
+        <h2>Request a local-site walkthrough</h2>
+        <p>This page does not send email. Submit to open a mail draft on your machine.</p>
+        <form id="request-form" class="request">
+          <label>Name <input name="name" required autocomplete="name" /></label>
+          <label>Email <input name="email" type="email" required autocomplete="email" /></label>
+          <label>Town and shop type <textarea name="note" required rows="3"></textarea></label>
+          <button type="submit">Open a request draft</button>
+          <p class="status" id="request-status" hidden></p>
+        </form>
+      </section>
+    </main>
+
+    <footer>DeployLocal · local sites + operator lead book · no invented customers</footer>
+    <script src="/app.js"></script>
+  </body>
+</html>
